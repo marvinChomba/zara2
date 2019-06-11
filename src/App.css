@@ -1,0 +1,26 @@
+
+.image-container {
+  overflow: hidden;
+}
+.prod-img {
+  transition: all 0.4s linear;
+}
+.image-container:hover .prod-img{
+  transform: scale(1.1);
+}
+.home {
+  height: 600px;
+  /* background: url("./back.jpeg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-clip: border-box
+}
+.brand {
+  font-family: 'Satisfy'
+}
+@media (max-width:698px) {
+  .welcome {
+    font-size: 1.2rem;
+  }
+}
