@@ -1,5 +1,4 @@
 import React , { Component } from "react";
-import axios from "axios"
 
 const ZaraContext = React.createContext();
 
@@ -207,7 +206,7 @@ const data = [
 
 class ZaraProvider extends Component {
   state = {
-    clothes: [],
+    clothes: [...data],
     cart:[],
     cartTotal:0,
     selectedProduct:{},
@@ -280,36 +279,6 @@ class ZaraProvider extends Component {
     })
   }
 
-
-  componentDidMount = () => {
-    axios.get("https://zara-88f4a.firebaseio.com/clothes.json").then(res => {
-      this.setState(() => {
-        const clothes = res.data["-Lh3Dop4Ej8oPPFXhbad"];
-        const selected = clothes.filter(cloth => cloth.selected)[0];
-        return {
-          clothes: clothes,
-          selectedProduct:selected,
-        }
-      })
-    })
-  }
-    
-  post = () => {
-    axios.post("https://zara-88f4a.firebaseio.com/clothes.json", data).then(res => {
-      console.log(res)
-    }, (err) => {
-      console.log(err)
-    })
-  }
-
-  post2 = () => {
-    axios.put("https://zara-88f4a.firebaseio.com/clothes/-Lh3Dop4Ej8oPPFXhbad.json",this.state.clothes).then(res => {
-      console.log(res)
-    }, (err) => {
-      console.log(err)
-    })
-  }
-  
   removeItem = (id) => {
     const cart = [...this.state.cart];
     const prods = [...this.state.clothes];
@@ -340,8 +309,6 @@ class ZaraProvider extends Component {
         clothes:[...prods],
         selectedProduct:selectedProd
       }
-    },() => {
-      this.post2()
     })
   }
 
