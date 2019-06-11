@@ -234,7 +234,6 @@ class ZaraProvider extends Component {
       }
     },() => {
       this.getTotals()
-      localStorage.setItem('cart',JSON.stringify(this.state.cart))
     }) 
   }
 
@@ -245,15 +244,12 @@ class ZaraProvider extends Component {
     prod.count -= 1;
     if(prod.count === 0) {
       this.removeItem(id)
-      localStorage.setItem('cart',JSON.stringify(this.state.cart));
     } else {
       prod.total = prod.count * prod.price;
       this.setState({
         cart:[...tempCart]
       },() => {
         this.getTotals();
-        localStorage.setItem('cart', JSON.stringify(this.state.cart));
-
       })
 
     }
@@ -280,23 +276,10 @@ class ZaraProvider extends Component {
     },() => {
       console.log("Hey")
       this.getTotals();
-      localStorage.setItem('cart', JSON.stringify(this.state.cart));
-      localStorage.setItem('clothes', JSON.stringify(this.state.clothes));
 
     })
   }
 
-  componentWillMount() {
-    if(localStorage.getItem("cart")) {
-      this.setState(() => {
-        return {
-          cart:JSON.parse(localStorage.getItem('cart'))
-        }
-      },() => {
-        console.log(this.state.cart)
-      })
-    }
-  }
 
   componentDidMount = () => {
     axios.get("https://zara-88f4a.firebaseio.com/clothes.json").then(res => {
@@ -307,28 +290,6 @@ class ZaraProvider extends Component {
           clothes: clothes,
           selectedProduct:selected,
         }
-      },() => {
-        // want to get cart then update that info to the products in the state;
-        // get the prod in the cart
-        const tempCart = [...this.state.cart];
-        const prods = [...this.state.clothes];
-        for(let i = 0; i < tempCart.length; i++) {
-          // loop through all the prods and update them
-          for(let j = 0; j < prods.length; j++) {
-            if(tempCart[i]['id'] === prods[j]['id']) {
-              prods[j]['count'] = tempCart[i]['count'];
-              prods[j]['inCart'] = true;
-            }
-          }
-        }
-        this.setState(() => {
-          return {
-          cart:[...tempCart],
-          clothes:[...prods]
-          }
-        },() => {
-          this.getTotals();
-        })
       })
     })
   }
@@ -364,8 +325,6 @@ class ZaraProvider extends Component {
       }
     },() => {
       this.getTotals();
-      localStorage.setItem('cart', JSON.stringify(this.state.cart));
-      localStorage.setItem('clothes',JSON.stringify(this.state.clothes));
     })
   }
 
