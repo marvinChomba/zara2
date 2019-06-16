@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from "react-router-dom";
+import {Link,NavLink} from "react-router-dom";
 import {ZaraConsumer} from "../context";
 
 export default class Navbar extends Component {
@@ -13,13 +13,13 @@ export default class Navbar extends Component {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/" className="nav-link">Home</Link>
+              <NavLink to="/" className="nav-link">Home</NavLink>
             </li>
             <li className="nav-item">
               <ZaraConsumer>
                 {value => {
                   const {cart} = value;
-                  return <Link className="nav-link" to="/cart">Cart <span className="badge badge-light">{cart.length}</span></Link>
+                  return <NavLink className="nav-link" to="/cart">Cart <span className="badge badge-light">{cart.length}</span></NavLink>
                 }}
               </ZaraConsumer>
             </li>
