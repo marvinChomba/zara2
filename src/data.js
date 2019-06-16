@@ -8,7 +8,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": "winter",
-    "img": "img/hoodie.jpeg",
+    "img": "/img/hoodie.jpeg",
     "selected": false
   },
   {
@@ -20,7 +20,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": "winter",
-    "img": "img/bomber.jpeg",
+    "img": "/img/bomber.jpeg",
     "selected": false
 
   },
@@ -33,7 +33,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": "summer",
-    "img": "img/dress.jpeg",
+    "img": "/img/dress.jpeg",
     "selected": false
   },
   {
@@ -45,7 +45,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": "winter",
-    "img": "img/jacket.jpeg",
+    "img": "/img/jacket.jpeg",
     "selected": false
 
   },
@@ -58,7 +58,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": "summer",
-    "img": "img/glasses.jpeg",
+    "img": "/img/glasses.jpeg",
     "selected": false
 
   },
@@ -71,7 +71,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": "winter",
-    "img": "img/trousers.jpeg",
+    "img": "/img/trousers.jpeg",
     "selected": false
 
   },
@@ -84,7 +84,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": "summer",
-    "img": "img/t-shirt.jpeg",
+    "img": "/img/t-shirt.jpeg",
     "selected": false
 
   },
@@ -97,7 +97,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": null,
-    "img": "img/watch.jpeg",
+    "img": "/img/watch.jpeg",
     "selected": false
   },
   {
@@ -109,7 +109,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": 'winter',
-    "img": "img/trenchcoat.jpeg",
+    "img": "/img/trenchcoat.jpeg",
     "selected": false
   },
   {
@@ -121,7 +121,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": 'winter',
-    "img": "img/allblack.jpeg",
+    "img": "/img/allblack.jpeg",
     "selected": false
   },
   {
@@ -133,7 +133,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": 'winter',
-    "img": "img/2stripes.jpeg",
+    "img": "/img/2stripes.jpeg",
     "selected": false
   },
   {
@@ -145,7 +145,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": 'winter',
-    "img": "img/dress2.jpeg",
+    "img": "/img/dress2.jpeg",
     "selected": false
   },
   {
@@ -157,7 +157,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": 'winter',
-    "img": "img/retro.jpeg",
+    "img": "/img/retro.jpeg",
     "selected": false
   },
   {
@@ -169,7 +169,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": 'winter',
-    "img": "img/suit.jpeg",
+    "img": "/img/suit.jpeg",
     "selected": false
   },
   {
@@ -181,7 +181,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": 'winter',
-    "img": "img/jeans.jpeg",
+    "img": "/img/jeans.jpeg",
     "selected": false
   },
   {
@@ -193,7 +193,7 @@ const data = [
     "count": 0,
     "total": 0,
     "category": 'winter',
-    "img": "img/sweatshirt.jpeg",
+    "img": "/img/sweatshirt.jpeg",
     "selected": false
   },
 

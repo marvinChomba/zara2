@@ -6,8 +6,8 @@ export default function Product({cloth,addToCart,select}) {
     <div className="col-10 col-md-6 col-lg-3 text-center mb-5">
       <p className="text-primary">{cloth.name}</p>
       <p>KES: {cloth.price}</p>
-      <Link to="/details">
-        <div className="image-container p-0" onClick={() => select(cloth.id)} style={{ 'cursor': 'pointer' }}>
+      <Link to={`/details/${cloth.id}`}>
+        <div className="image-container p-0" style={{ 'cursor': 'pointer' }}>
           <img style={{
             'height': "20rem",
             'maxWidth': "100%"
